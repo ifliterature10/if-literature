@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IF Literature - Penerbit Sastra Indonesia</title>
+<meta name="description" content="IF Literature - Menerbitkan karya sastra terbaik Indonesia">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<style>
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Georgia',serif;}
+body {background:#f8f8f8;line-height:1.6;}
+header {background:#0d0d0d;color:#fff;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.logo {font-size:1.5rem;font-weight:bold;letter-spacing:2px;}
+nav a {color:#ddd;margin-left:1.5rem;text-decoration:none;}
+nav a:hover {color:#d4af37;}
+.hero {height:90vh;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;padding:0 2rem;}
+.hero h1 {font-size:3.5rem;margin-bottom:1rem;}
+.hero p {font-size:1.2rem;margin-bottom:2rem;}
+.hero button {padding:1rem 2rem;border:none;background:#d4af37;color:#000;font-weight:bold;cursor:pointer;border-radius:8px;font-size:1.1rem;transition:0.3s;}
+.hero button:hover {background:#b8942f;}
+.section {padding:4rem 5%;text-align:center;}
+.section h2 {margin-bottom:2rem;border-left:5px solid #d4af37;padding-left:1rem;display:inline-block;}
+.books {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;max-width:1200px;margin:0 auto;}
+.book {background:#fff;padding:1.5rem;border-radius:12px;text-align:center;transition:0.3s;box-shadow:0 5px 20px rgba(0,0,0,0.1);}
+.book:hover {transform:translateY(-10px);}
+.book img {width:100%;height:300px;object-fit:cover;border-radius:10px;}
+.book h4 {margin:1rem 0 0.5rem;color:#333;}
+.book p {color:#666;font-weight:bold;}
+form {max-width:500px;margin:2rem auto;display:flex;flex-direction:column;}
+form input,form textarea,form button {width:100%;padding:1rem;margin:0.5rem 0;border:1px solid #ddd;border-radius:8px;font-size:1rem;}
+form textarea {height:120px;resize:vertical;}
+form button {background:#d4af37;color:#000;border:none;font-weight:bold;cursor:pointer;transition:0.3s;}
+form button:hover {background:#b8942f;}
+footer {background:#0d0d0d;color:#aaa;padding:2rem;text-align:center;}
+.social a {color:#d4af37;margin:0 1rem;font-size:1.2rem;text-decoration:none;}
+@media (max-width:768px) {.hero h1{font-size:2.5rem;}.hero p{font-size:1rem;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">IF Literature</div>
+  <nav>
+    <a href="#home">Beranda</a>
+    <a href="#books">Buku</a>
+    <a href="#about">Tentang</a>
+    <a href="#form">Kirim Naskah</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>IF Literature</h1>
+  <p>Menerbitkan Gagasan, Menghidupkan Kata</p>
+  <button onclick="scrollToForm()">📝 Kirim Naskah</button>
+</section>
+
+<section class="section" id="books">
+  <h2>📚 Katalog Terbaru</h2>
+  <div class="books">
+    <div class="book">
+      <img src="https://images.unsplash.com/photo-1512820790803-83ca3b5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bayang di Antara">
+      <h4>Bayang di Antara</h4>
+      <p>Intan P.</p>
+    </div>
+    <div class="book">
+      <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Jejak Kertas">
+      <h4>Jejak Kertas</h4>
+      <p>Rudi K.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about" style="background:#fff;">
+  <h2>Tentang IF Literature</h2>
+  <p style="max-width:800px;margin:0 auto;font-size:1.2rem;color:#333;">
+    IF Literature adalah penerbit independen yang berfokus pada karya sastra, pemikiran, dan narasi yang membentuk masa depan Indonesia. Setiap cerita berharga.
+  </p>
+</section>
+
+<section class="section" id="form">
+  <h2>📖 Kirim Naskah</h2>
+  <form id="naskahForm">
+    <input type="text" placeholder="Nama Lengkap" required>
+    <input type="email" placeholder="Email" required>
+    <input type="file" accept=".doc,.docx,.pdf" required>
+    <textarea placeholder="Cerita singkat tentang naskah (opsional)"></textarea>
+    <button type="submit">🚀 Kirim Naskah</button>
+  </form>
+  <p style="color:#666;margin-top:1rem;">Review dalam 7 hari kerja</p>
+</section>
+
+<footer id="contact">
+  <p>© 2026 IF Literature</p>
+  <div class="social">
+    <a href="mailto:info@ifliterature.com">📧 info@ifliterature.com</a>
+    <a href="#">📱 WA: 0812-3456-7890</a>
+  </div>
+</footer>
+
+<script>
+function scrollToForm() {
+  document.getElementById("form").scrollIntoView({behavior:"smooth"});
+}
+document.getElementById('naskahForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('✅ Terima kasih! Naskah diterima. Cek email dalam 24 jam.');
+  this.reset();
+});
+</script>
+</body>
+</html>
